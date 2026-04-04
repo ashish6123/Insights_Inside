@@ -62,10 +62,6 @@ Built with a focus on **real-world usability**, this project combines:
 
 ---
 
-## 🖼️ Application Preview
-
-> A professional sentiment intelligence workspace with dashboard, charts, and interactive analysis tools.
-
 ---
 
 ## 🏗️ Tech Stack
