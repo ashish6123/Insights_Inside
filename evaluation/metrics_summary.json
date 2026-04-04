@@ -1,0 +1,39 @@
+{
+  "split_strategy": "70/15/15 (stratified)",
+  "train_samples": 143535,
+  "val_samples": 30757,
+  "test_samples": 30758,
+  "val_accuracy": 0.9145,
+  "test_accuracy": 0.9122,
+  "cv_mean": 0.9132,
+  "cv_std": 0.0012,
+  "cv_scores": [
+    0.9138,
+    0.9145,
+    0.9136,
+    0.913,
+    0.9111
+  ],
+  "per_class": {
+    "positive": {
+      "precision": 0.8527,
+      "recall": 0.9008,
+      "f1": 0.8761,
+      "support": 4235
+    },
+    "negative": {
+      "precision": 0.3773,
+      "recall": 0.6764,
+      "f1": 0.4844,
+      "support": 1536
+    },
+    "neutral": {
+      "precision": 0.9861,
+      "recall": 0.9286,
+      "f1": 0.9564,
+      "support": 24987
+    }
+  },
+  "macro_f1": 0.7723,
+  "weighted_f1": 0.9218
+}

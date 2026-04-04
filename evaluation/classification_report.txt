@@ -1,0 +1,19 @@
+Classification Report — Test Set
+==================================================
+
+              precision    recall  f1-score   support
+
+    positive       0.85      0.90      0.88      4235
+    negative       0.38      0.68      0.48      1536
+     neutral       0.99      0.93      0.96     24987
+
+    accuracy                           0.91     30758
+   macro avg       0.74      0.84      0.77     30758
+weighted avg       0.94      0.91      0.92     30758
+
+
+Additional Metrics
+==================================================
+Val  Accuracy : 91.45%
+Test Accuracy : 91.22%
+CV Mean       : 91.32% ± 0.12%
