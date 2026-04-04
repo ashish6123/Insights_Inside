@@ -1,166 +1,206 @@
-# Insights Inside
+# 🔍 Insights Inside
 
-Professional Streamlit dashboard for product review sentiment analysis.
+### AI-Powered Sentiment Intelligence Platform for Product Reviews
 
-Insights Inside classifies customer reviews into:
-- Positive
-- Negative
-- Neutral
+🌐 **Live App:** https://insightsinside.streamlit.app/
+📂 **Repository:** https://github.com/ashish6123/Insights_Inside
 
-It supports single-review prediction, batch analysis, model diagnostics, confidence-based filtering, and downloadable CSV/Excel reports.
+---
 
-## Features
+## 📌 Overview
 
-- Clean, professional UI/UX with sidebar-driven controls
-- Batch workspace for:
-  - CSV upload
-  - Excel upload
-  - Sample-data-folder loading
-  - Pasted text lines
-- Automatic review/summary column mapping
-- Rich analytics:
-  - sentiment distribution
-  - confidence analysis
-  - per-class probability charts
-- Filter results by confidence threshold and sentiment labels
-- Export filtered results to CSV and Excel
-- Single-review quick prediction mode
-- Model metrics and diagnostics visible in the sidebar and dashboard
+**Insights Inside** is a full-stack Machine Learning application designed to analyze and classify product reviews into **Positive, Negative, or Neutral sentiments** with high accuracy.
 
-## Tech Stack
+Built with a focus on **real-world usability**, this project combines:
 
-- Python 3.10+
-- Streamlit
-- scikit-learn
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- joblib
-- openpyxl
-- xlsxwriter
+* ⚙️ Production-ready ML pipeline
+* 🎯 Advanced evaluation metrics
+* 🎨 Modern dashboard UI (Streamlit-based)
 
-## Project Structure
+---
 
-```text
-insights_inside/
-├─ app.py
-├─ sentiment_utils.py
-├─ requirements.txt
-├─ SAMPLE_DATA_GUIDE.md
-├─ sample_data/
-├─ model/
-│  ├─ tfidf_vectorizer.pkl
-│  └─ sentiment_model.pkl
-└─ evaluation/
-   ├─ metrics_summary.json
-   └─ classification_report.txt
+## ✨ Key Features
+
+### 🧠 Machine Learning
+
+* Logistic Regression + TF-IDF (bigrams)
+* Trained on **200K+ real-world reviews**
+* Balanced class handling
+* Confidence scoring + probability outputs
+
+### 📊 Model Insights Dashboard
+
+* Test Accuracy, CV Accuracy, Macro F1, Weighted F1
+* Per-class metrics (Precision, Recall, F1)
+* Confidence distribution & visual analytics
+* Model evaluation charts (CV, confusion matrix)
+
+### 🧪 Batch Analysis
+
+* Upload CSV / Excel files
+* Paste multiple reviews
+* Sample datasets included
+* Export results (CSV & Excel)
+
+### ⚡ Single Review Analysis
+
+* Real-time prediction
+* Probability breakdown visualization
+* Trust Score (Confidence × Class F1)
+
+### 🎛️ Model Control Center (Sidebar)
+
+* Model health monitoring
+* Training stats & dataset split
+* Adjustable confidence filters
+* Clean, SaaS-style UI
+
+---
+
+## 🖼️ Application Preview
+
+> A professional sentiment intelligence workspace with dashboard, charts, and interactive analysis tools.
+
+---
+
+## 🏗️ Tech Stack
+
+| Category      | Technology        |
+| ------------- | ----------------- |
+| Frontend      | Streamlit         |
+| Backend       | Python            |
+| ML            | scikit-learn      |
+| NLP           | TF-IDF Vectorizer |
+| Visualization | Matplotlib        |
+| Data Handling | Pandas, NumPy     |
+
+---
+
+## 📂 Project Structure
+
+```
+Insights_Inside/
+│
+├── app.py                      # Main Streamlit application
+├── sentiment_utils.py          # Prediction helpers
+├── train_model.py              # Model training script
+├── requirements.txt            # Dependencies
+│
+├── model/
+│   ├── tfidf_vectorizer.pkl
+│   └── sentiment_model.pkl
+│
+├── evaluation/
+│   ├── metrics_summary.json
+│   ├── confusion_matrix.png
+│   ├── metrics_chart.png
+│   └── classification_report.txt
+│
+├── sample_data/
+│   ├── sample_reviews.csv
+│   └── dataset_part_*.csv
+│
+└── README.md
 ```
 
-## Setup
+---
 
-1. Create and activate a virtual environment.
+## 📈 Model Performance
 
-Windows (PowerShell):
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+| Metric        | Score |
+| ------------- | ----- |
+| Test Accuracy | ~91%  |
+| CV Accuracy   | ~91%  |
+| Macro F1      | ~77%  |
+| Weighted F1   | ~92%  |
+
+> ⚠️ Dataset is imbalanced → Macro F1 highlights real performance.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/ashish6123/Insights_Inside.git
+cd Insights_Inside
 ```
 
-2. Install dependencies.
+### 2️⃣ Install dependencies
 
-```powershell
+```bash
 pip install -r requirements.txt
 ```
 
-3. Start the app.
+### 3️⃣ Run the app
 
-```powershell
+```bash
 streamlit run app.py
 ```
 
-4. Open the local URL shown in terminal (usually http://localhost:8501).
+---
 
-## How To Use
+## 📊 How It Works
 
-### 1) Batch Analysis (recommended)
+1. Input reviews (file upload / text input)
+2. Text preprocessing (cleaning + normalization)
+3. TF-IDF vectorization
+4. Logistic Regression prediction
+5. Output:
 
-1. Open Batch Workspace.
-2. Choose Input source:
-   - Upload CSV
-   - Upload Excel
-   - Sample data folder
-   - Paste text lines
-3. Select mapping for:
-   - Review column (required)
-   - Summary column (optional)
-4. Click Run Batch Analysis.
-5. Use sidebar filters (confidence and sentiment).
-6. Download filtered results as CSV/Excel.
+   * Sentiment
+   * Confidence %
+   * Class probabilities
 
-### 2) Single Review
+---
 
-1. Open Single Review tab.
-2. Enter review text (and optional summary).
-3. Click Analyse Sentiment.
+## 🎯 Use Cases
 
-## Sample Data Workflow
+* 🛒 E-commerce review analysis
+* 📢 Customer feedback insights
+* 🧾 Product quality monitoring
+* 🤖 NLP portfolio project
 
-Use this when you want quick testing without re-uploading files:
+---
 
-1. Place test files inside sample_data/.
-2. In app -> Batch Workspace -> Input source, choose Sample data folder.
-3. Pick a file from the dropdown and run analysis.
+## 🚀 What Makes This Project Stand Out
 
-See detailed steps in SAMPLE_DATA_GUIDE.md.
+✔ Clean, production-style UI
+✔ Full ML pipeline + evaluation
+✔ Real dataset (200K+ samples)
+✔ Business-oriented insights (not just predictions)
+✔ Interactive analytics dashboard
 
-## Expected Input Format
+---
 
-Recommended columns:
-- Review (required)
-- Summary (optional)
+## 🧠 Future Improvements
 
-If your file uses different names, map them in the UI.
+* Deep Learning models (BERT / LSTM)
+* API integration (FastAPI backend)
+* User authentication system
+* Real-time streaming analysis
+* Cloud deployment (AWS / GCP)
 
-Example CSV:
+---
 
-```csv
-Review,Summary
-Absolutely love this phone.,Great value
-Battery drains too fast.,Not happy
-It works as expected.,Okay product
-```
+## 👨‍💻 Author
 
-## Troubleshooting
+**Ashish Kumar**
 
-### 1) ModuleNotFoundError: xlsxwriter or openpyxl
+* 💼 Aspiring AI/ML Engineer
+* 🔗 GitHub: https://github.com/ashish6123
 
-Install missing packages:
+---
 
-```powershell
-pip install xlsxwriter openpyxl
-```
+## ⭐ Support
 
-### 2) LogisticRegression missing attribute: multi_class
+If you found this project useful:
+👉 Star the repo
+👉 Share with others
 
-This app includes a compatibility guard while loading legacy pickled models.
+---
 
-If you still face model issues, align scikit-learn version between training and runtime.
+## 📜 License
 
-### 3) Version mismatch warnings for scikit-learn
-
-If your model was trained in a different scikit-learn version, prediction can still run but may be unstable.
-
-Recommended fix:
-- Use the same scikit-learn version used during training
-- Re-export model artifacts after version alignment
-
-## Notes
-
-- Keep model artifacts in model/.
-- Keep evaluation outputs in evaluation/.
-- For team demos, add one or more files to sample_data/ and use Sample data folder mode.
-
-## License
-
-Use the appropriate license for your project/repository.
+This project is for educational and portfolio purposes.
