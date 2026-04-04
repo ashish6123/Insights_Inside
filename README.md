@@ -1,5 +1,11 @@
 # 🔍 Insights Inside
 
+## 🖼️ Live Application Preview  
+
+<p align="center">
+  <img src="assets/image.png" width="100%" />
+</p>
+
 ### AI-Powered Sentiment Intelligence Platform for Product Reviews
 
 🌐 **Live App:** https://insightsinside.streamlit.app/
