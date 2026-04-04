@@ -60,9 +60,7 @@ Built with a focus on **real-world usability**, this project combines:
 * Adjustable confidence filters
 * Clean, SaaS-style UI
 
----
 
----
 
 ## 🏗️ Tech Stack
 
