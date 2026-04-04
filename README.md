@@ -9,7 +9,6 @@
 ### AI-Powered Sentiment Intelligence Platform for Product Reviews
 
 🌐 **Live App:** https://insightsinside.streamlit.app/
-📂 **Repository:** https://github.com/ashish6123/Insights_Inside
 
 ---
 
