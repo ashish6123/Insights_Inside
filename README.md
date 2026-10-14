@@ -185,7 +185,7 @@ streamlit run app.py
 
 ## 👨‍💻 Author
 
-**Ashish Kumar**
+**Ashish Ranjan**
 
 * 💼 Aspiring AI/ML Engineer
 * 🔗 GitHub: https://github.com/ashish6123
